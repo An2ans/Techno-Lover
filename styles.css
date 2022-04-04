@@ -1,0 +1,151 @@
+/* Mobile first dev:
+breakpoints: 320px, 480px, 768px, 1024px. */
+
+/* eliminate def browser config */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
+
+body {
+  background-color: #0a0a0a;
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23177204' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: tomato;
+}
+
+/* HEADER */
+
+.headerContainer {
+  background: url(images/header-img.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 500px;
+}
+
+.headerContainer .title {
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 2rem;
+  color: #000;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.headerContainer p {
+  position: absolute;
+  font-size: 0.5rem;
+  top: 530px;
+  left: 20px;
+}
+
+/* ABOUT */
+
+.about {
+  width: 100%;
+  min-height: 700px;
+  padding: 2.5rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.about h2,
+.about h1 {
+  color: #000;
+}
+
+/* WHAT IS TECHNO? */
+
+.whatIsTechno {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2.5rem;
+  gap: 2rem;
+}
+
+.whatIsTechno p {
+  text-align: justify;
+  width: 50%;
+}
+
+.block1,
+.block3 {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.block1 img {
+  max-width: 350px;
+  max-height: 300px;
+}
+
+.block2 {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2rem;
+}
+
+/* FAV ARTISTS */
+
+.favArtists {
+  width: 100%;
+  min-height: 700px;
+  background-color: #000;
+}
+
+.favArtists img {
+  max-width: 100%;
+  max-height: 500px;
+}
+
+.favArtists .title {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.favArtists .carousel-caption {
+  background-color: rgba(80, 80, 80, 0.4);
+  border-radius: 12px;
+}
+
+/* @media (min-width: 768px) {
+  .headerContainer {
+    margin: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .headerContainer {
+    margin: 0 6%;
+  }
+} */
+
+/* .banner img {
+  max-width: 100%;
+  height: auto;
+}
+
+.banner p {
+  position: relative;
+  text-align: left;
+  margin-top: -200px;
+  z-index: 3;
+  font-size: 0.8rem;
+} */
