@@ -11,6 +11,7 @@ breakpoints: 320px, 480px, 768px, 1024px. */
 }
 
 body {
+  font-family: "Oswald", sans-serif;
   background-color: #0a0a0a;
   background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23177204' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
@@ -21,13 +22,14 @@ ul {
 
 a {
   text-decoration: none;
+  color: rgba(52, 180, 52, 0.9);
+}
+
+a:hover {
+  color: rgba(51, 170, 51, 0.7);
 }
 
 /* NAVBAR */
-
-.navbar {
-  background-color: tomato;
-}
 
 /* HEADER */
 
@@ -35,11 +37,12 @@ a {
   background: url(images/header-img.jpg) no-repeat center/cover;
   width: 100%;
   height: 500px;
+  position: absolute;
 }
 
 .headerContainer .title {
   position: absolute;
-  top: 230px;
+  top: 190px;
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
@@ -52,13 +55,14 @@ a {
 .headerContainer p {
   position: absolute;
   font-size: 0.5rem;
-  top: 530px;
+  top: 450px;
   left: 20px;
 }
 
 /* ABOUT */
 
 .about {
+  margin-top: 500px;
   width: 100%;
   min-height: 700px;
   padding: 2.5rem;
@@ -109,6 +113,43 @@ a {
 .block1 img {
   max-width: 350px;
   max-height: 300px;
+}
+
+.technoLink {
+  width: 60%;
+  height: 9rem;
+  background-color: #fff;
+  color: #000;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: background-color 0.5s linear;
+}
+
+.technoLink:hover {
+  background-color: rgba(51, 170, 51, 0.7);
+}
+
+/* MORE TECHNO */
+
+.moreTechno {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.moreTechno h2 {
+  text-align: justify;
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+.moreTechno p {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.moreTechno iframe {
+  margin: 1.5rem 0;
+  width: 100%;
 }
 
 /* FAV ARTISTS */
@@ -175,7 +216,7 @@ a {
 }
 
 .contactLink:hover {
-  background-color: rgb(0, 99, 0);
+  background-color: rgba(51, 170, 51, 0.7);
 }
 
 .contactTitle {
@@ -201,7 +242,7 @@ a {
 /* FOOTER */
 
 .footer {
-  min-height: 60px;
+  min-height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -231,7 +272,22 @@ a {
   color: black;
 }
 
+/* MEDIA QUERIES */
+
 @media (min-width: 768px) {
+  .headerContainer .title {
+    top: 160px;
+    font-size: 2.2rem;
+  }
+  .about h1 {
+    margin-left: 10%;
+  }
+
+  .about h2 {
+    margin-left: 15%;
+    width: 70%;
+  }
+
   .whatIsTechno p {
     width: 50%;
   }
@@ -246,10 +302,114 @@ a {
     flex-direction: row-reverse;
     gap: 2.5rem;
   }
+
+  .moreTechno .type1,
+  .moreTechno .type3,
+  .moreTechno .type5 {
+    display: flex;
+    margin: 2rem auto;
+    gap: 2rem;
+  }
+
+  .moreTechno .type2,
+  .moreTechno .type4 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 2rem auto;
+    gap: 2rem;
+  }
+
+  #carouselArtists {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .favArtists h1 {
+    padding: 2.5rem;
+  }
+
+  .contact {
+    padding: 4.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
+  .headerContainer {
+    height: 700px;
+  }
+  .headerContainer .title {
+    top: 190px;
+    font-size: 2.8rem;
+  }
+
+  .headerContainer p {
+    font-size: 0.8rem;
+    top: 660px;
+  }
+  .about {
+    margin-top: 700px;
+  }
+
+  .whatIsTechno {
+    width: 80%;
+    margin: 4rem auto;
+  }
+  .whatIsTechno p {
+    font-size: 1.2rem;
+    width: 60%;
+  }
+  .whatIsTechno h2 {
+    font-size: 1.6rem;
+  }
+  .moreTechno {
+    padding: 3rem 6rem;
+  }
+  .moreTechno p {
+    font-size: 1.2rem;
+  }
+  .moreTechno h2 {
+    font-size: 1.6rem;
+  }
   .formContainer {
     width: 50%;
+  }
+
+  .type1,
+  .type2,
+  .type3,
+  .type4,
+  .type5 {
+    gap: 4rem;
+  }
+
+  #carouselArtists {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .contact {
+    padding: 4.5rem 6.5rem;
+  }
+  .contactLink {
+    margin-right: 8rem;
+    font-size: 1.8rem;
+    width: 9rem;
+    height: 5rem;
+  }
+
+  .linkContainer {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .formContainer label {
+    font-size: 1.6rem;
+  }
+
+  .formContainer .btnContainer {
+    margin-bottom: 4rem;
+  }
+  .footer i {
+    font-size: 2rem;
   }
 }
